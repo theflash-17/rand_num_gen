@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>Redirecting...</h1>
-        <script type="text/javascript">
-            setTimeout(function() {
-                window.location.href = "rand_gen.php";
-            }, 1000); // 1000 milliseconds (1 seconds)
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="style.css">
+        <title>Random Number Generator</title>
+    </head>
+    <header>
+        <div id="header.php">
+            <center><h1>Random Mobile Number Generator</h1></center>
+            <center><h2>This webpage generates entries of random ten digit numbers along with associated random strings.</h2></center>
+            <br>
+        </div>
+    </header>
+    <body>      
+        <center>
+        <div class="container">
+            <form id="numberForm">
+                <label for="numTotal">Enter the number of phone numbers to generate:</label>
+                <input type="number" id="numTotal" name="numTotal" required>
+                <button type="submit">Generate</button>
+            </form>
+            <br>
+            <table id="numberTable">
+                <thead>
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Generated numbers will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+        </center> 
+        <br>
+        <!-- Include the footer content from footer.html -->
+        <footer>
+            <center>
+            <div id="footer.html">
+                &copy; 2023
+            </div>
+            </center>
+        </footer>
+
+        <script>
+            document.getElementById('numberForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const numTotal = parseInt(document.getElementById('numTotal').value, 10);
+                const tableBody = document.querySelector('#numberTable tbody');
+                tableBody.innerHTML = '';
+
+                for (let i = 1; i <= numTotal; i++) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${i}</td>
+                        <td>${generateRandomPhoneNumber()}</td>
+                    `;
+                    tableBody.appendChild(row);
+                }
+            });
+
+            function generateRandomPhoneNumber() {
+                const min = 1000000000;
+                const max = 9999999999;
+                const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                return String(randomNumber);
+            }
         </script>
     </body>
 </html>
