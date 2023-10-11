@@ -1,0 +1,118 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+.form-signin {
+  /* max-width: 10px; */
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.cont-ext {
+  margin-top: 50px;
+}
+
+.circle {
+  height: 250px;
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-top: 50px;
+  stroke: black;
+  stroke-width: 2;
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+/* For buttons in palatte */
+.btn-outline {
+  text-align: center;
+  font-weight: bold;
+  background-color: transparent;
+  color: inherit;
+  transition: all .5s;
+}
+
+.btn-block:hover {
+  color: #fff;
+}
+
+.footer_class {
+  margin-top: 50px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.timeline h2 {
+  margin-bottom: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-image {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
