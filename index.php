@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 		<meta name="robots" content="noindex" />
 		<title>Random Number Generator</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<header>
 			<div class="cont">
